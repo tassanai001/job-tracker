@@ -2,6 +2,7 @@ const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
 const cors = require('cors');
+const authRoutes = require('./src/auth/authRoutes');
 
 const app = express();
 const server = http.createServer(app);
@@ -22,6 +23,9 @@ app.use(express.json());
 app.get("/health", (req, res) => {
     res.json({ message: "Job Tracker API is running" });
 });
+
+// Routes
+app.use('/auth', authRoutes);
 
 // Socket.IO logic
 io.on("connection", (socket) => {

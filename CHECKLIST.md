@@ -9,10 +9,10 @@
 ---
 
 #### 🔐 Milestone 2: User Authentication
-- [ ] Implement user registration with password hashing
-- [ ] Implement login with JWT generation
-- [ ] Create `authMiddleware` to protect private routes
-- [ ] Add unit tests for `AuthService`
+- [X] Implement user registration with password hashing
+- [X] Implement login with JWT generation
+- [X] Create `authMiddleware` to protect private routes
+- [X] Add unit tests for `AuthService`
 
 ---
 
