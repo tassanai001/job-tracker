@@ -13,6 +13,9 @@ class MongoJobRepository {
     async delete(id) {
         return await Job.findByIdAndDelete(id);
     }
+    async findDueReminders(now) {
+        return await Job.find({ reminderAt: { $lte: now } });
+    }
 }
 
 module.exports = MongoJobRepository;
