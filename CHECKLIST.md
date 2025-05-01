@@ -17,11 +17,11 @@
 ---
 
 #### 📄 Milestone 3: Job Management
-- [ ] Define `JobRepository` interface
-- [ ] Implement `MongoJobRepository` with Mongoose
-- [ ] Implement `JobService` with CRUD logic
-- [ ] Create REST API routes for jobs
-- [ ] Add unit tests for `JobService`
+- [X] Define `JobRepository` interface
+- [X] Implement `MongoJobRepository` with Mongoose
+- [X] Implement `JobService` with CRUD logic
+- [X] Create REST API routes for jobs
+- [X] Add unit tests for `JobService`
 
 ---
 
