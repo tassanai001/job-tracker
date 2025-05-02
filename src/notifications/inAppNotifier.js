@@ -1,4 +1,5 @@
 const Notifier = require("./notifier");
+const gateway = require("../websocket/notificationGateway");
 
 class InAppNotifier extends Notifier {
     constructor(notificationGateway) {
@@ -7,7 +8,7 @@ class InAppNotifier extends Notifier {
     }
 
     send(userId, message) {
-        return this.gateway.sendToUser(userId, message);
+        return gateway.sendToUser(userId, message);
     }
 }
 

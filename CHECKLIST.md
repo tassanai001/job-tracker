@@ -26,18 +26,18 @@
 ---
 
 #### ⏰ Milestone 4: Reminder & Notification Framework
-- [ ] Implement `Notifier` interface
-- [ ] Implement `EmailNotifier` using Nodemailer
-- [ ] Implement `InAppNotifier` using WebSockets
-- [ ] Implement `ReminderService` with interval-based job check
-- [ ] Integrate `CompositeNotifier` to send both types
+- [X] Implement `Notifier` interface
+- [X] Implement `EmailNotifier` using Nodemailer
+- [X] Implement `InAppNotifier` using WebSockets
+- [X] Implement `ReminderService` with interval-based job check
+- [X] Integrate `CompositeNotifier` to send both types
 
 ---
 
 #### 🔌 Milestone 5: WebSocket Gateway
-- [ ] Implement `NotificationGateway` using Socket.IO
-- [ ] Handle user sessions by userId via JWT on connection
-- [ ] Allow `InAppNotifier` to send messages via gateway
+- [X] Implement `NotificationGateway` using Socket.IO
+- [X] Handle user sessions by userId via JWT on connection
+- [X] Allow `InAppNotifier` to send messages via gateway
 
 ---
 

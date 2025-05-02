@@ -3,6 +3,7 @@ const http = require('http');
 const { Server } = require('socket.io');
 const cors = require('cors');
 
+const NotificationGateway = require('./src/websocket/notificationGateway');
 const authRoutes = require('./src/auth/authRoutes');
 const jobRoutes = require('./src/jobs/jobRoutes');
 
@@ -24,12 +25,7 @@ app.use(cors());
 app.use(express.json());
 
 // Socket.IO logic
-io.on("connection", (socket) => {
-    console.log(`User connected: ${socket.id}`);
-    socket.on("disconnect", () => {
-        console.log(`User disconnected: ${socket.id}`);
-    });
-});
+NotificationGateway.setup(io);
 
 // Health check route
 app.get("/health", (req, res) => {
