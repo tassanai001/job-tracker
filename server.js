@@ -2,13 +2,14 @@ const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
 const cors = require('cors');
-require('dotenv').config();
 
 const NotificationGateway = require('./src/websocket/notificationGateway');
 const authRoutes = require('./src/auth/authRoutes');
 const jobRoutes = require('./src/jobs/jobRoutes');
 const connectToMongo = require('./src/config/db');
 const { createReminderService } = require('./diContainer');
+
+require('dotenv').config();
 
 // Connect to MongoDB
 connectToMongo();

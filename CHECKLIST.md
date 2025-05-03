@@ -49,9 +49,9 @@
 ---
 
 #### 🧪 Milestone 7: Testing & Mocks
-- [] Write unit tests for `ReminderService` using mock `Notifier`
-- [] Write unit tests for `JobService` using mock `JobRepository`
-- [] Write unit tests for `AuthService`
+- [X] Write unit tests for `ReminderService` using mock `Notifier`
+- [X] Write unit tests for `JobService` using mock `JobRepository`
+- [X] Write unit tests for `AuthService`
 
 ---
 
