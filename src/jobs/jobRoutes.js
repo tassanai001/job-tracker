@@ -1,20 +1,18 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 
-const auth = require("../auth/authMiddleware");
-const controller = require("./jobController");
-const JobService = require("./jobService");
-const MongoRepo = require("./mongoJobRepository");
+const auth = require('../auth/authMiddleware');
+const controller = require('./jobController');
+const { createJobService } = require('../../diContainer');
 
-// Wire dependencies via middleware
 router.use(auth, (req, res, next) => {
-    req.jobService = new JobService(new MongoRepo());
-    next();
+  req.jobService = createJobService(); // Inject from DI container
+  next();
 });
 
-router.post("/", controller.createJob);
-router.get("/", controller.getJobs);
-router.put("/:id", controller.updateJob);
-router.delete("/:id", controller.deleteJob);
+router.post('/', controller.createJob);
+router.get('/', controller.getJobs);
+router.put('/:id', controller.updateJob);
+router.delete('/:id', controller.deleteJob);
 
 module.exports = router;

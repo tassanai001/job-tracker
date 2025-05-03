@@ -6,6 +6,7 @@ const cors = require('cors');
 const NotificationGateway = require('./src/websocket/notificationGateway');
 const authRoutes = require('./src/auth/authRoutes');
 const jobRoutes = require('./src/jobs/jobRoutes');
+const { createReminderService } = require('./diContainer');
 
 const app = express();
 const server = http.createServer(app);
@@ -26,6 +27,10 @@ app.use(express.json());
 
 // Socket.IO logic
 NotificationGateway.setup(io);
+
+// After setting up app & socket.io
+const reminderService = createReminderService();
+reminderService.start(); // starts interval check
 
 // Health check route
 app.get("/health", (req, res) => {
