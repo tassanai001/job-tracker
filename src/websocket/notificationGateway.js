@@ -32,13 +32,13 @@ function setup(io) {
 
     io.on("connection", (socket) => {
         const userId = socket.userId;
-        console.log(`User connected via WS: ${userId}`);
+        console.log(`✅ User connected via WS: ${userId}`);
 
         clientManager.register(userId, socket);
 
         socket.on("disconnect", () => {
             clientManager.unregister(userId);
-            console.log(`User disconnected via WS: ${userId}`);
+            console.log(`❌ User disconnected via WS: ${userId}`);
         });
     });
 }

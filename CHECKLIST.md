@@ -42,16 +42,16 @@
 ---
 
 #### 🧩 Milestone 6: Dependency Injection & Wiring
-- [ ] Create factory functions or simple DI container
-- [ ] Wire up JobService, ReminderService, Notifiers via interfaces
-- [ ] Ensure no service directly instantiates concrete dependencies
+- [X] Create factory functions or simple DI container
+- [X] Wire up JobService, ReminderService, Notifiers via interfaces
+- [X] Ensure no service directly instantiates concrete dependencies
 
 ---
 
 #### 🧪 Milestone 7: Testing & Mocks
-- [ ] Write unit tests for `ReminderService` using mock `Notifier`
-- [ ] Write unit tests for `JobService` using mock `JobRepository`
-- [ ] Write unit tests for `AuthService`
+- [] Write unit tests for `ReminderService` using mock `Notifier`
+- [] Write unit tests for `JobService` using mock `JobRepository`
+- [] Write unit tests for `AuthService`
 
 ---
 
